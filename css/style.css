@@ -80,9 +80,10 @@ cite.player-avatar.player2 {
 }
 ul.player-name li span.turn-active {
     position: absolute;
-    right: -150px;
-    top: 30px;
     display: none;
+    font-size: 12px;
+    right: 10px;
+    bottom: 10px;
 }
 ul.player-name li.turn span.turn-active, ul.player-name li.won span.turn-active {
     display: block;
@@ -162,5 +163,25 @@ figure img {
     }
     100% {
         transform: scale(1);
+    }
+}
+
+
+
+@media (max-width: 920px) {
+    ul.player-name {
+        padding: 20px;
+    }
+    main.player-area {
+        display: block;
+        margin: 0;
+    }
+    .player-grid {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .dice-area {
+        padding: 20px;
     }
 }

@@ -132,7 +132,7 @@ const movePlayer = (newPosition, player) => {
         } else if(changePlayerPosition === 100) {
             window.alert(`${player} won the game!`);
 
-            document.querySelector(`.${player}`).querySelector('.turn-active').innerHTML = 'You Won the game!';
+            document.querySelector(`.${player}`).querySelector('.turn-active').innerHTML = 'You Won!';
             
             document.querySelector(`.${player}`).classList.add('won');
             
