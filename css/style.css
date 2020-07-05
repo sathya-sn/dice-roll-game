@@ -5,21 +5,162 @@ body {
     font: 16px helvetica;
     outline: none;
 }
+ul {
+    list-style: none;
+}
+.btn {
+    padding: 10px;
+    cursor: pointer;
+}
 .roll-dice {
     height: 100%;
     width: 100%;
 }
+header, footer {
+    padding: 30px;
+    background-color: #cccc;
+    font-size: 24px;
+    text-align: center;
+}
+footer {
+    font-size: 16px;
+    padding: 10px;
+}
+main.player-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 30px;
+}
+.player-grid {
+    width: 800px;
+}
 .grid-container {
     display: grid;
-    width: 820px;
-    height: 820px;
+    width: 100%;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(10, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
 .grid-container div {
-    width: 80px;
-    height: 80px;
+    height: 50px;
     border: 1px solid #eee;
+    position: relative;
+    box-sizing: border-box;
+}
+.grid-container div span {
+    display: inline-block;
+    padding: 5px;
+    opacity: .5;
+    font-size: 12px;
+}
+cite.player-avatar {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    position: absolute;
+    top: 15px;
+    animation-name: active;
+}
+cite.player-avatar[turn = "true"] {
+    -webkit-animation: headingAnimation 0.20s ease-in-out 0.20s both;
+            animation: headingAnimation 0.20s ease-in-out 0.20s both;
+}
+cite.player-avatar.player1 {
+    background: #d9f7d2;
+    border: solid 1px #2bd205;
+    left: 10px;
+}
+cite.player-avatar.player2 {
+    background: #ffd1d1;
+    border: solid 1px #ff0507;
+    right: 10px;
+}
+ul.player-name li span.turn-active {
+    position: absolute;
+    right: -150px;
+    top: 30px;
+    display: none;
+}
+ul.player-name li.turn span.turn-active, ul.player-name li.won span.turn-active {
+    display: block;
+}
+
+
+/* for names */
+
+
+ul.player-name li {
+    padding: 10px;
+    border: 1px solid #eee;
+    width: 200px;
+    margin-bottom: 30px;
+    position: relative;
+}
+ul.player-name li label {
+    font-size: 14px;
+}
+ul.player-name li h3 {
+    margin: 20px 0 0;
+    font-size: 16px;
+}
+ul.player-name li.player1 {
+    border: solid 1px #2bd205;
+    background-color: #d9f7d2;
+}
+ul.player-name li.player2 {
+    border: solid 1px #ff0507;
+    background-color: #ffd1d1;
+}
+ul.player-name li.name-button {
+    padding: 0;
+    border: none;
+}
+
+
+/* dice area */
+
+.dice-area {
+    margin-right: 100px;
+}
+figure {
+    margin: 0;
+    width: 100px;
+    height: 100px;
+}
+figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.btn-roll {
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+/* keyframes */
+
+@-moz-keyframes active {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes active {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
 }

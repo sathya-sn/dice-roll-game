@@ -4,14 +4,31 @@
     </head>
     <body>
         <section class="roll-dice">
-            <h1 class="text-center text-white">Single player dice game</h1>
-        <main class="player-area">
-            <div class="player-grid grid-container"></div>
-            <span style="width: 20px; height: 20px; background-color: rgb(0, 0, 0);"></span>
-        </main>
-        <div class="dice-area">
-
-        </div>
+            <header class="text-center text-white">Dice Roll</header>
+            <main class="player-area">
+                <ul class="player-name">
+                    <li class="player1 turn">
+                        <label>Player 1</label>
+                        <h3 class="player1-name">ABC</h3>
+                        <span class="turn-active">&lt;-- Your Turn</span>
+                    </li>
+                    <li class="player2">
+                        <label>Player 2</label>
+                        <h3 class="player2-name">XYZ</h3>
+                        <span class="turn-active">&lt;-- Your Turn</span>
+                    </li>
+                    <li class="name-button">
+                        <button class="btn btn-change">Change Names</button>
+                    </li>
+                </ul>
+                <div class="player-grid"><div class="grid-container"></div></div>
+                <div class="dice-area">
+                    <h4>Click the button to roll the dice</h4>
+                    <figure><img class="dice-image" src="./images/dice-1.png" alt="dice-image"></figure>
+                    <button class="btn btn-roll">Roll dice</button>
+                </div>
+            </main>
+            <footer>@diceroll, all rights reserved</footer>
         </section>
 
         <script type="text/javascript" src="./scripts/script.js"></script>
