@@ -34,6 +34,7 @@ main.player-area {
 }
 .player-grid {
     width: 800px;
+    margin: 0 30px;
 }
 .grid-container {
     display: grid;
